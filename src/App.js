@@ -4,7 +4,7 @@ import Form from './components/Form/form';
 function App() {
   return (
     <>
-      <Form></Form>
+      <Form titulo="Entrar" cor="lightblue"></Form>
     </>
   );
 }

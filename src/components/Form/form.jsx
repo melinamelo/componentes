@@ -1,7 +1,7 @@
 import { Box, Button, Checkbox, Container, FormControlLabel, Grid, Link, TextField, Typography } from '@mui/material';
 import React from 'react'
 
-function Form() {
+function Form(props) {
   return (
     <>
         <Container component="main" maxWidth="xs">
@@ -12,13 +12,13 @@ function Form() {
                 alignItems: 'center',
             }}>
                 <Typography component="h2" variant="h5">
-                    Formulário de Login
+                    {props.titulo}
                 </Typography>
                 <Box component='form' sx={{mt: 1}}>
-                    <TextField fullWidth margin='normal' label="Email" name="email" variant="outlined"/>
-                    <TextField fullWidth margin='normal' label="Senha" type="password" variant='outlined'/>
+                    <TextField fullWidth margin='normal' label="Email" name="email" variant="outlined" required/>
+                    <TextField fullWidth margin='normal' label="Senha" type="password" variant='outlined'required/>
                     <FormControlLabel control={<Checkbox value="remember" color="primary"/>} label="Lembrar-me"/>
-                    <Button fullWidth type='submit' variant="contained" sx={{mt:2, mb: 1,}}>Login</Button>
+                    <Button style={{backgroundColor: props.cor}} fullWidth type='submit' variant="contained" sx={{mt:2, mb: 4,}}>Login</Button>
                     <Grid container>
                         <Grid item xs>
                             <Link href="#" >Esqueci minha senha</Link> 
